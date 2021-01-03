@@ -1,0 +1,12 @@
+def find_even_index(arr):
+    arr1 = []
+    if sum(arr[1: len(arr)]) == 0:
+        return(0)
+    else:
+        for i in range(len(arr) - 1):
+           # k = arr[i]
+            arr1.append(arr[i])
+
+            if sum(arr1) == sum(arr[i + 2: (len(arr))]):
+                return(i + 1)
+        return(-1)
