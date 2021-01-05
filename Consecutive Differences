@@ -1,0 +1,10 @@
+def differences(lst):
+    b = []
+    while len(lst) > 1:
+        for i in range(0, (len(lst) - 1)):
+            b.append(abs(lst[i] - lst[i + 1]))
+        lst = b.copy()
+        b.clear()
+    return(lst[0])
+    
+differences([1, 2, 3])
