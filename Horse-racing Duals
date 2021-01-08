@@ -1,0 +1,12 @@
+import sys
+import math
+
+k = 0
+a = []
+n = int(input())
+for i in range(n):
+    pi = int(input())
+    a.append(pi)
+a = sorted(a)
+k = min(abs(a[i] - a[i + 1]) for i in range(len(a) - 1))
+print(k)
