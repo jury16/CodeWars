@@ -1,0 +1,12 @@
+def longest_consec(strarr, k):
+    s = ''
+    result = ''
+    for i in range(len(strarr) - k + 1):
+        s = ''
+        for j in range(k):
+            s = s + strarr[i + j]
+        if len(s) > len(result):
+            result = s
+    return(result)
+    
+longest_consec(["it","wkppv","ixoyx", "3452", "zzzzzzzzzzzz"], 3)
