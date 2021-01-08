@@ -1,0 +1,28 @@
+import sys
+import math
+
+# Auto-generated code below aims at helping you parse
+# the standard input according to the problem statement.
+
+message = input()
+chifre = message
+s = ''
+a = ''
+k = 0
+m = 0
+l1 = "0"
+for j in chifre:
+    l = format(ord (j), "b").zfill(7)
+    s = s + l
+for i in s:
+    if i == '1' and k == 0:
+        a = a + " 0 0"
+        k += 1
+        m = 0
+    elif i == '0' and m == 0:
+        a = a + " 00 0"
+        m += 1
+        k = 0
+    else:
+        a = a + "0"
+print (a [1:])
