@@ -1,0 +1,17 @@
+def rot13(message):
+    s = ""
+    for i in message:
+        if 64 < ord(i) < 91:
+            if ord(i) < 78:
+                i = chr(ord(i) + 13)
+            else:
+                i = chr(ord(i) - 13)
+        elif 96 < ord(i) < 123:
+            if ord(i) < 110:
+                i = chr(ord(i) + 13)
+            else:
+                i = chr(ord(i) - 13)
+        s = s + i
+    return(s)
+    
+rot13("aopqrstuvwxyzabcdefghijklz")
