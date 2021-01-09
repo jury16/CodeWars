@@ -1,0 +1,14 @@
+def is_prime(num):
+    if  num <= 3:
+         return num > 1
+    if num % 2 == 0 or num % 3 == 0:
+        return False
+    devisor = 5
+
+    while devisor**2 <= num:
+        if num % devisor == 0 or num %(devisor + 2) == 0:
+            return False
+        devisor += 6
+    return True
+    
+is_prime(75)
