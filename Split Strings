@@ -1,0 +1,15 @@
+def solution(s):
+    a = []
+    b = '{0}_'
+    if len(s) == 0:
+        return a
+    if len(s) % 2:
+        s += '_'
+        print(s)
+    for i in range(0, len(s) - 1, 2):
+            a.append(s[i] + s[i + 1])
+    return(a)
+
+
+
+print(solution('asdfaiuo))
