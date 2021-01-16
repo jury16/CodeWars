@@ -1,0 +1,16 @@
+def decodeMorse(morse_code):
+    a = []
+    s1 = morse_code.split("   ")
+    d = []
+    for i in s1:
+        d.append(i.split())
+    for i in range(len(d)):
+        if len(a):
+            a.append(" ")
+        for j in range(len(d[i])):
+            for chars, morse in MORSE_CODE.items():
+                if chars == d[i][j]:
+                    a.append(morse)
+    return ''.join(a)
+  
+  decodeMorse('.... . -.--   .--- ..- -.. .')
