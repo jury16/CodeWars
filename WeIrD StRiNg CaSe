@@ -10,4 +10,4 @@ def to_weird_case(string):
             s.append(string [i].lower())
     return ''.join(s)
     
-    print(to_weird_case('Weird string case'))
+print(to_weird_case('Weird string case'))
