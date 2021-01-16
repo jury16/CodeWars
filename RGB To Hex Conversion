@@ -1,0 +1,7 @@
+def rgb(r, g, b):
+    s = list(map(lambda i: min(255, max(i, 0)), [r, g, b]))
+    l = list(map(lambda i: "{:02X}".format(i), s))
+    return (''.join(l))
+    
+    
+rgb(-20,275,125)
