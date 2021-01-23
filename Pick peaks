@@ -1,0 +1,23 @@
+def pick_peaks(arr):
+    d ={"pos":[],"peaks":[]}
+    p = []
+    k = 0
+    l = 0
+    #print(arr)
+    for i in range(0, len(arr) - 1):
+        if arr[i + 1] > arr [i] :
+            p.clear()
+            p.append(i + 1)
+            k = 0
+            l = 1
+        elif arr[i + 1] == arr [i] and i:
+            p.append(i)           
+        elif arr[i + 1] < arr [i] and not k  and l:
+            if  len(p):
+                d ["pos"].append(p[0])
+                d ["peaks"].append(arr[p[0]])
+                k = arr[i]
+                p.clear()
+    return d
+    
+pick_peaks([3,2,3,6,4,1,2,3,2,1,2,2,2,1])
