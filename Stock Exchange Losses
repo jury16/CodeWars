@@ -1,0 +1,26 @@
+import sys
+import math
+
+a = []
+s = 0
+n = int(input())
+for i in input().split():
+    v = int(i)
+    a.append(v)
+k = len(a)
+while k > 0:
+    if len(a) == 0:
+        break
+    else:
+        mi = a.index(min(a))
+        if mi > 0 and min(a) - max(a[:mi]) < s:
+            s = min(a) - max(a[:mi])
+            a = a[mi:]
+        else:
+            a = a[(mi + 1):]
+    k -= 1
+print(s)
+
+# input: 6
+#        3 2 4 2 1 5
+# output: -3
