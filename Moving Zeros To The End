@@ -1,0 +1,6 @@
+def move_zeros(array):
+    lst = [i for i in array if i != 0 or isinstance(i, bool)]
+    return list(lst) + [0] * (len(array) - len(lst))
+    
+    
+print(move_zeros([0,1,None,2,False,1,0]),[1,None,2,False,1,0,0])
