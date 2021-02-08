@@ -1,7 +1,6 @@
 import sys
 import math
 w, h, count_x, count_y = [int(i) for i in input().split()]
-k = 0
 c = []
 d = []
 a = [w]
@@ -12,14 +11,19 @@ for i in input().split():
     a.append(x)
     c = c + [abs(i - x) for i in a[:-1]]
 a = a + c
-k = 0
+p = set(a)
 for i in input().split():
     y = int(i)
     b.append(y)
     d = d + [abs(j - y) for j in b[:-1]]
 b = b + d
-p = set(a)
-for i in p:
-    if i in a and b:
-        sum  += a.count(i) * b.count(i)
+l = set(b)
+if len(p) >= len(l):
+    for i in l:
+        if i in a and b:
+            sum += a.count(i) * b.count(i)
+else:
+    for i in p:
+        if i in a and b:
+            sum += a.count(i) * b.count(i)
 print(sum)
